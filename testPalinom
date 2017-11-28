@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+
+size_t start, end;
+int test = 1;    
+
+for (start = 0, end = strlen(line) - 1; start < end; start++, end--)
+{
+  if (line[start] != line[end])
+  {
+    test = 0; 
+    break;
+  }
+}
+
+puts(test ? "YES" : "NO");
